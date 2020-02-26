@@ -5,26 +5,26 @@
 
 
 
-void find_natural_dividers(int val)
+int find_natural_dividers(int val)
 {
     int how_many = 0;
     
-    for (int i = 0; i < val; i++)
+    for (int i = 1; i < val; i++)
     {
         if (i % 3 == 0 || i % 5 == 0)
         {
-            std::cout << how_many << " " << i << std::endl;
-            how_many++;
+            //std::cout << how_many << " " << i << std::endl;
+            how_many += i;
         }
     }
+
+    return how_many;
 }
 
 int main()
 {
-    std::cout << "## 10 ##\n";
-    find_natural_dividers(10);
-    std::cout << "## 1000 ##\n";
-    find_natural_dividers(1000);
+    std::cout << "## 10 ##: " << find_natural_dividers(10) << std::endl;
+    std::cout << "## 1000 ##: " << find_natural_dividers(1000) << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
