@@ -5,7 +5,7 @@
 MULTIPLIERS = [3, 5]
 
 test_input = 10
-test_output = [3, 5, 6, 9]
+test_output = sum([3, 5, 6, 9])
 
 def find_natural_dividers(val):
     dividers = list()
@@ -19,8 +19,8 @@ def find_natural_dividers(val):
         if correct:
             dividers.append(i)
 
-    return dividers
+    return sum(dividers)
 
 ret = find_natural_dividers(test_input)
-print("Function is working {} - {}.".format("correct" if ret == test_output else "incorrect", ret))
+print("Function is working {} - {} is not {}.".format("correct" if ret == test_output else "incorrect", ret, test_output))
 print("Function usage for 1000 is {}".format(find_natural_dividers(1000)))
